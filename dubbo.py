@@ -61,7 +61,7 @@ class dubbo:
         while data.find(self.__finish) == -1:
             data = tn.read_very_eager()
         data = data.split("\n")
-        data = json.loads(data[0], encoding="gbk")
+        data = json.loads(data[0], encoding=self.__encoding)
 
         tn.close()  # tn.write('exit\n')
 
