@@ -4,11 +4,18 @@ Dubbo Telnet Client of python
 
 
 ### 安装
-*  源码安装  
+*  手动安装
+
+```shell
+dist=`python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"`
+cp dubbo.py $dist
+```
+
+*  源码安装(Todo) 
 python setup.py install
-*  pip安装  
+*  pip安装(Todo)  
 pip install dubbo-client==0.9b5
-*  git安装  
+*  git安装(Todo)  
 pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@0.9b5
 
 ### Example
