@@ -12,6 +12,7 @@ class dubbo:
     __encoding = "gbk"
     __finish = 'dubbo>'
     __connect_timeout = 10
+    __read_timeout = 10
 
     # 定义构造方法
     def __init__(self, host, port):
@@ -41,6 +42,12 @@ class dubbo:
         '''
         self.__connect_timeout = timeout
 
+    def set_read_timeout(self, timeout):
+        '''
+        defualt is ``10``
+        '''
+        self.__read_timeout = timeout
+
     def do(self, command):
         # 连接Telnet服务器
         try:
@@ -53,7 +60,7 @@ class dubbo:
         tn.write('\n')
 
         # 执行命令
-        tn.read_until(self.__finish)
+        tn.read_until(self.__finish, timeout = self.__read_timeout)
         tn.write('%s\n' % command)
 
         # 获取结果
