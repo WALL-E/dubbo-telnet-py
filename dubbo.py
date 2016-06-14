@@ -3,6 +3,7 @@
 
 import json
 import telnetlib
+import socket
 
 
 class dubbo:
@@ -30,7 +31,11 @@ class dubbo:
 
     def do(self, command):
         # 连接Telnet服务器
-        tn = telnetlib.Telnet(host=self.host, port=self.port, timeout=self.__connect_timeout)
+        try:
+            tn = telnetlib.Telnet(host=self.host, port=self.port, timeout=self.__connect_timeout)
+        except socket.error, msg:
+            print "[host:%s port:%s] %s" % (self.host, self.port, msg)
+            return
 
         # 触发doubble提示符
         tn.write('\n')
