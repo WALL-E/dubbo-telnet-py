@@ -21,12 +21,24 @@ class dubbo:
             self.__init = True
 
     def set_finish(self, finish):
+        '''
+        defualt is ``dubbo>``
+        '''
         self.__finish = finish
 
     def set_encoding(self, encoding):
+        '''
+        If ``result retured by dubbo`` is a ``str`` instance and is encoded with an ASCII based encoding
+        other than utf-8 (e.g. latin-1) then an appropriate ``encoding`` name
+        must be specified. Encodings that are not ASCII based (such as UCS-2)
+        are not allowed and should be decoded to ``unicode`` first.
+        '''
         self.__encoding = encoding
 
     def set_connect_timeout(self, timeout):
+        '''
+        defualt is ``10``
+        '''
         self.__connect_timeout = timeout
 
     def do(self, command):
