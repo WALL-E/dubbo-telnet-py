@@ -7,7 +7,7 @@ import socket
 
 
 class dubbo:
-    # 定义私有属性,私有属性在类外部无法直接进行访问
+    # 定义私有属性
     __init = False
     __encoding = "gbk"
     __finish = 'dubbo>'
