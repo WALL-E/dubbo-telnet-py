@@ -12,11 +12,22 @@ cp dubbo.py $dist
 ```
 
 *  源码安装(Todo) 
+
+```shell
 python setup.py install
+```
+
 *  pip安装(Todo)  
+
+```shell
 pip install dubbo-client==0.9b5
+```
+
 *  git安装(Todo)  
+
+```shell
 pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@0.9b5
+```
 
 ### Example
 
