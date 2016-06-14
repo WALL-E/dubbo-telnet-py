@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import json
-import telnetlib
 import socket
+import telnetlib
 
 
 class dubbo:
