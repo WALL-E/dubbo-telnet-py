@@ -54,3 +54,18 @@ pip install --upgrade git+https://github.com/WALL-E/dubbo-telnet-py.git
     print conn.do(command)
 ```
 
+### Dubbo Telnet命令
+
+Dubbo2.0.5以上版本服务提供端口支持telnet命令，使用如下
+
+```shell
+telnet localhost 20880
+```
+
+或者
+
+```shell
+echo status | nc -i 1 localhost 20880
+```
+
+详见[官方文档](http://dubbo.io/)
