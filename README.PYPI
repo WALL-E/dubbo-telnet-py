@@ -19,7 +19,7 @@
 
     interface = 'com.zrj.pay.trade.api.QueryTradeService'
     method = 'tradeDetailQuery'
-    param = '{"id": "nimeide"}'
+    param = '{"message": "HelloWorld"}'
     print conn.invoke(interface, method, param)
 
     command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"HelloWorld"})'
