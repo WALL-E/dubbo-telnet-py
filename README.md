@@ -69,3 +69,8 @@ echo status | nc -i 1 localhost 20880
 ```
 
 详见[Dubbo官方文档](http://dubbo.io/)
+
+
+### Todo
+
+* 使用pexpect替换telnetlib
