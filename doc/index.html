@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>通过telnet调用Dubbo接口</title>
+</head>
+<body>
+    <h1>通过telnet调用Dubbo接口</h1>
+    <hr>
+    <h3>Example</h3>
+
+    <pre>
+    import dubbo_telnet
+
+    Host = '192.168.1.203'  # Doubble服务器IP
+    Port = 28008  # Doubble服务端口
+
+    # 初始化dubbo对象
+    conn = dubbo_telnet.connect(Host, Port)
+
+    # 设置telnet连接超时时间
+    conn.set_connect_timeout(10)
+
+    # 设置dubbo服务返回响应的编码
+    conn.set_encoding('gbk')
+
+    interface = 'com.zrj.pay.trade.api.QueryTradeService'
+    method = 'tradeDetailQuery'
+    param = '{"message": "HelloWorld"}'
+    print conn.invoke(interface, method, param)
+
+    command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"HelloWorld"})'
+    print conn.do(command)
+    </pre>
+
+</body>
+</html>
