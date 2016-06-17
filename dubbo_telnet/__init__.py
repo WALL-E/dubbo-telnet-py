@@ -52,8 +52,8 @@ class dubbo:
         # 连接Telnet服务器
         try:
             tn = telnetlib.Telnet(host=self.host, port=self.port, timeout=self.__connect_timeout)
-        except socket.error, msg:
-            print "[host:%s port:%s] %s" % (self.host, self.port, msg)
+        except socket.error as err:
+            print("[host:%s port:%s] %s" % (self.host, self.port, err))
             return
 
         # 触发doubble提示符
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     interface = 'com.zrj.pay.trade.api.QueryTradeService'
     method = 'tradeDetailQuery'
     param = '{"id": "nimeide"}'
-    print conn.invoke(interface, method, param)
+    print(conn.invoke(interface, method, param))
 
     command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"id":"nimeide"})'
-    print conn.do(command)
+    print(conn.do(command))
