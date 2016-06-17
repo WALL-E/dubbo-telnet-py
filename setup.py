@@ -20,6 +20,6 @@ setup(name='dubbo_telnet',
       download_url=DOWNLOAD_URL,
       author='zhangzheng',
       author_email='zhangzheng@qianbao.com',
-      license='MIT',
+      license='unlicense',
       packages=['dubbo_telnet'],
       zip_safe=False)
