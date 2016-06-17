@@ -38,12 +38,17 @@ class dubbo:
 
     def set_connect_timeout(self, timeout):
         '''
+        Defines a timeout for establishing a connection with a dubbo server.
+        It should be noted that this timeout cannot usually exceed 75 seconds.
+
         defualt is ``10``
         '''
         self.__connect_timeout = timeout
 
     def set_read_timeout(self, timeout):
         '''
+        Defines a timeout for reading a response expected from the dubbo server.
+
         defualt is ``10``
         '''
         self.__read_timeout = timeout
