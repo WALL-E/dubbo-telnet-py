@@ -8,7 +8,7 @@ if __name__ == '__main__':
     Port = 28008  # Doubble服务端口
 
     # 初始化dubbo对象
-    conn = dubbo_telnet.dubbo(Host, Port)
+    conn = dubbo_telnet.connect(Host, Port)
 
     # 设置telnet连接超时时间
     conn.set_connect_timeout(10)

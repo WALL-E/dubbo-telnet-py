@@ -60,7 +60,7 @@ class dubbo:
         tn.write('\n')
 
         # 执行命令
-        tn.read_until(self.__finish, timeout = self.__read_timeout)
+        tn.read_until(self.__finish, timeout=self.__read_timeout)
         tn.write('%s\n' % command)
 
         # 获取结果
@@ -77,6 +77,10 @@ class dubbo:
     def invoke(self, interface, method, param):
         cmd = "%s %s.%s(%s)" % ('invoke', interface, method, param)
         return self.do(cmd)
+
+
+def connect(host, port):
+    return dubbo(host, port)
 
 
 if __name__ == '__main__':
