@@ -1,6 +1,6 @@
 Dubbo Telnet Client of python
 =====================================  
-通过telnet调用Dubbo接口
+通过telnet调用Dubbo接口, 可用来做Dubbo的自动化测试。
 
 ### 兼容性测试
 
