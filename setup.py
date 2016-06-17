@@ -13,6 +13,9 @@ setup(name='dubbo_telnet',
       version=VERSION,
       description='Dubbo Telnet Client of python',
       long_description=open("README.PYPI").read(),
+      keywords=(
+          "dubbo, dubbo_telnet, telnet,"
+      ),
       url=HOMEPAGE,
       download_url=DOWNLOAD_URL,
       author='zhangzheng',
