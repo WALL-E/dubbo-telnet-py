@@ -5,10 +5,10 @@ Dubbo Telnet Client of python
 
 ### 安装
 
-*  源码安装 
+*  easyinstall安装 
 
 ```shell
-python setup.py install
+easy_install dubbo_telnet
 ```
 
 *  pip安装 
