@@ -49,8 +49,3 @@ pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@1.0.0b2
     print conn.do(command)
 ```
 
-### TODO
-1.制作安装包
-
-### Licenses
-LICENSE   
