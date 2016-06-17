@@ -1,27 +1,4 @@
-Dubbo Telnet Client of python
-=====================================  
 通过telnet调用Dubbo接口
-
-
-### 安装
-
-*  源码安装 
-
-```shell
-python setup.py install
-```
-
-*  pip安装 
-
-```shell
-pip install dubbo-client==1.0.0b2
-```
-
-*  git安装  
-
-```shell
-pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@1.0.0b2
-```
 
 ### Example
 
@@ -45,7 +22,7 @@ pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@1.0.0b2
     param = '{"id": "nimeide"}'
     print conn.invoke(interface, method, param)
 
-    command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"hello,world"})'
+    command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"HelloWorld"})'
     print conn.do(command)
 ```
 
