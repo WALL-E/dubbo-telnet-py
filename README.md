@@ -2,6 +2,11 @@ Dubbo Telnet Client of python
 =====================================  
 通过telnet调用Dubbo接口
 
+### 兼容性测试
+
+*  Python 2.6.6
+*  Python 2.7.10
+*  Python 3.4.3
 
 ### 安装
 
@@ -14,13 +19,13 @@ easy_install dubbo_telnet
 *  pip安装 
 
 ```shell
-pip install dubbo_telnet
+pip install --upgrade dubbo_telnet
 ```
 
 *  git安装  
 
 ```shell
-pip install git+https://github.com/WALL-E/dubbo-telnet-py.git
+pip install --upgrade git+https://github.com/WALL-E/dubbo-telnet-py.git
 ```
 
 ### Example
