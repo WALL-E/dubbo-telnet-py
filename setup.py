@@ -7,7 +7,7 @@ os.chdir(THISDIR)
 VERSION = open("version.txt").readline().strip()
 HOMEPAGE = 'https://github.com/WALL-E/dubbo-telnet-py'
 DOWNLOAD_BASEURL = "https://github.com/WALL-E/dubbo-telnet-py/raw/master/dist/"
-DOWNLOAD_URL = DOWNLOAD_BASEURL + "dubbo_telnet-%s-py2.6.egg" % VERSION
+DOWNLOAD_URL = DOWNLOAD_BASEURL + "dubbo_telnet-%s-py2.7.egg" % VERSION
 
 setup(name='dubbo_telnet',
       version=VERSION,
