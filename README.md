@@ -5,22 +5,22 @@ Dubbo Telnet Client of python
 
 ### 安装
 
-*  源码安装(Todo) 
+*  源码安装 
 
 ```shell
 python setup.py install
 ```
 
-*  pip安装(Todo)  
+*  pip安装 
 
 ```shell
-pip install dubbo-client==0.9b5
+pip install dubbo-client==0.2
 ```
 
-*  git安装(Todo)  
+*  git安装  
 
 ```shell
-pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@0.9b5
+pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@0.2
 ```
 
 ### Example

@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='dubbo_telnet',
-      version='0.1',
+      version='0.2',
       description='Dubbo Telnet Client of python',
       url='https://github.com/WALL-E/dubbo-telnet-py',
       author='zhangzheng',
