@@ -1,4 +1,5 @@
 import os
+import sys
 from setuptools import setup
 
 THISDIR = os.path.dirname(os.path.abspath(__file__))
@@ -7,7 +8,7 @@ os.chdir(THISDIR)
 VERSION = open("version.txt").readline().strip()
 HOMEPAGE = 'https://github.com/WALL-E/dubbo-telnet-py'
 DOWNLOAD_BASEURL = "https://github.com/WALL-E/dubbo-telnet-py/raw/master/dist/"
-DOWNLOAD_URL = DOWNLOAD_BASEURL + "dubbo_telnet-%s-py2.7.egg" % VERSION
+DOWNLOAD_URL = DOWNLOAD_BASEURL + "dubbo_telnet-%s-py%s.%s.egg" % (VERSION, sys.version_info.major, sys.version_info.minor)
 
 setup(name='dubbo_telnet',
       version=VERSION,
