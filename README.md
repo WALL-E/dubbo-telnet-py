@@ -14,7 +14,7 @@ python setup.py install
 *  pip安装 
 
 ```shell
-pip install dubbo-client
+pip install dubbo_telnet
 ```
 
 *  git安装  
