@@ -8,7 +8,15 @@ os.chdir(THISDIR)
 VERSION = open("version.txt").readline().strip()
 HOMEPAGE = 'https://github.com/WALL-E/dubbo-telnet-py'
 DOWNLOAD_BASEURL = "https://github.com/WALL-E/dubbo-telnet-py/raw/master/dist/"
-DOWNLOAD_URL = DOWNLOAD_BASEURL + "dubbo_telnet-%s-py%s.%s.egg" % (VERSION, sys.version_info.major, sys.version_info.minor)
+
+try:
+    major = sys.version_info.major
+    minor = sys.version_info.minor
+except AttributeError:
+    major = sys.version_info[0]
+    minor = sys.version_info[1]
+
+DOWNLOAD_URL = DOWNLOAD_BASEURL + "dubbo_telnet-%s-py%s.%s.egg" % (VERSION, major, minor)
 
 setup(name='dubbo_telnet',
       version=VERSION,
