@@ -14,13 +14,13 @@ python setup.py install
 *  pip安装 
 
 ```shell
-pip install dubbo-client==1.0.0b2
+pip install dubbo-client
 ```
 
 *  git安装  
 
 ```shell
-pip install git+https://github.com/WALL-E/dubbo-telnet-py.git@1.0.0b2
+pip install git+https://github.com/WALL-E/dubbo-telnet-py.git
 ```
 
 ### Example
