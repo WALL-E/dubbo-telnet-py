@@ -68,4 +68,4 @@ telnet localhost 20880
 echo status | nc -i 1 localhost 20880
 ```
 
-详见[官方文档](http://dubbo.io/)
+详见[Dubbo官方文档](http://dubbo.io/)
