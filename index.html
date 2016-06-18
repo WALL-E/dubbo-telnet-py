@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dubbo-telnet-py by WALL-E</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Dubbo-telnet-py</h1>
+      <h2 class="project-tagline">使用python实现telnet调用dubbo</h2>
+      <a href="https://github.com/WALL-E/dubbo-telnet-py" class="btn">View on GitHub</a>
+      <a href="https://github.com/WALL-E/dubbo-telnet-py/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/WALL-E/dubbo-telnet-py/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="dubbo-telnet-client-of-python" class="anchor" href="#dubbo-telnet-client-of-python" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dubbo Telnet Client of python</h1>
+
+<p>通过telnet调用Dubbo接口, 可用来做Dubbo的自动化测试。</p>
+
+<h3>
+<a id="兼容性测试" class="anchor" href="#%E5%85%BC%E5%AE%B9%E6%80%A7%E6%B5%8B%E8%AF%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>兼容性测试</h3>
+
+<ul>
+<li> Python 2.6.6</li>
+<li> Python 2.7.10</li>
+<li> Python 3.4.3</li>
+</ul>
+
+<h3>
+<a id="安装" class="anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>安装</h3>
+
+<ul>
+<li> easyinstall安装 </li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>easy_install dubbo_telnet</pre></div>
+
+<ul>
+<li> pip安装 </li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>pip install --upgrade dubbo_telnet</pre></div>
+
+<ul>
+<li> git安装<br>
+</li>
+</ul>
+
+<div class="highlight highlight-source-shell"><pre>pip install --upgrade git+https://github.com/WALL-E/dubbo-telnet-py.git</pre></div>
+
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example</h3>
+
+<div class="highlight highlight-source-python"><pre>    <span class="pl-k">import</span> dubbo_telnet
+
+    Host <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>192.168.1.203<span class="pl-pds">'</span></span>  <span class="pl-c"># Doubble服务器IP</span>
+    Port <span class="pl-k">=</span> <span class="pl-c1">28008</span>  <span class="pl-c"># Doubble服务端口</span>
+
+    <span class="pl-c"># 初始化dubbo对象</span>
+    conn <span class="pl-k">=</span> dubbo_telnet.connect(Host, Port)
+
+    <span class="pl-c"># 设置telnet连接超时时间</span>
+    conn.set_connect_timeout(<span class="pl-c1">10</span>)
+
+    <span class="pl-c"># 设置dubbo服务返回响应的编码</span>
+    conn.set_encoding(<span class="pl-s"><span class="pl-pds">'</span>gbk<span class="pl-pds">'</span></span>)
+
+    interface <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>com.zrj.pay.trade.api.QueryTradeService<span class="pl-pds">'</span></span>
+    method <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>tradeDetailQuery<span class="pl-pds">'</span></span>
+    param <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>{"id": "nimeide"}<span class="pl-pds">'</span></span>
+    <span class="pl-c1">print</span> conn.invoke(interface, method, param)
+
+    command <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"hello,world"})<span class="pl-pds">'</span></span>
+    <span class="pl-c1">print</span> conn.do(command)</pre></div>
+
+<h3>
+<a id="dubbo-telnet命令" class="anchor" href="#dubbo-telnet%E5%91%BD%E4%BB%A4" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dubbo Telnet命令</h3>
+
+<p>Dubbo2.0.5以上版本服务提供端口支持telnet命令，使用如下</p>
+
+<div class="highlight highlight-source-shell"><pre>telnet localhost 20880</pre></div>
+
+<p>或者</p>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-c1">echo</span> status <span class="pl-k">|</span> nc -i 1 localhost 20880</pre></div>
+
+<p>详见<a href="http://dubbo.io/">Dubbo官方文档</a></p>
+
+<h3>
+<a id="todo" class="anchor" href="#todo" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Todo</h3>
+
+<ul>
+<li>使用pexpect替换telnetlib</li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/WALL-E/dubbo-telnet-py">Dubbo-telnet-py</a> is maintained by <a href="https://github.com/WALL-E">WALL-E</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
