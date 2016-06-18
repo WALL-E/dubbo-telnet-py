@@ -47,10 +47,10 @@ pip install --upgrade git+https://github.com/WALL-E/dubbo-telnet-py.git
 
     interface = 'com.zrj.pay.trade.api.QueryTradeService'
     method = 'tradeDetailQuery'
-    param = '{"id": "nimeide"}'
+    param = '{"id": 1}'
     print conn.invoke(interface, method, param)
 
-    command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"hello,world"})'
+    command = 'invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"id":1})'
     print conn.do(command)
 ```
 
