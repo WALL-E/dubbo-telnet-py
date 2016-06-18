@@ -74,10 +74,10 @@
 
     interface <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>com.zrj.pay.trade.api.QueryTradeService<span class="pl-pds">'</span></span>
     method <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>tradeDetailQuery<span class="pl-pds">'</span></span>
-    param <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>{"id": "nimeide"}<span class="pl-pds">'</span></span>
+    param <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>{"id": 1}<span class="pl-pds">'</span></span>
     <span class="pl-c1">print</span> conn.invoke(interface, method, param)
 
-    command <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"message":"hello,world"})<span class="pl-pds">'</span></span>
+    command <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>invoke com.zrj.pay.trade.api.QueryTradeService.tradeDetailQuery({"id":1})<span class="pl-pds">'</span></span>
     <span class="pl-c1">print</span> conn.do(command)</pre></div>
 
 <h3>
