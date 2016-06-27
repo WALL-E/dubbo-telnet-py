@@ -68,7 +68,7 @@ telnet localhost 20880
 echo status | nc -i 1 localhost 20880
 ```
 
-详见[Dubbo官方文档](http://dubbo.io/)
+详见[Dubbo官方文档](http://dubbo.io/) 或[Telnet命令参考手册](http://dubbo.io/User+Guide-zh.htm#UserGuide-zh-Telnet%E5%91%BD%E4%BB%A4%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C)
 
 
 ### Todo
