@@ -22,7 +22,7 @@ setup(name='dubbo_telnet',
     version=VERSION,
     description='Dubbo Telnet Client of python',
     long_description=open("README.PYPI").read(),
-    long_description=open("README.PYPI", encoding='utf-8').read()
+    long_description=open("README.PYPI", encoding='utf-8').read(),
     keywords=(
         "dubbo, dubbo_telnet, telnet,"
     ),
